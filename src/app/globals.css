@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+
+
+/* Hide default cursor everywhere */
+html, body, * {
+  cursor: none !important;
+  
+}
+
+
+
+body {
+ /* Dark background like yasio.dev */
+  color: #ffffff;
+  cursor: none; /* Hide default cursor */
+}
+
+.Home-page{
+  background-image: url("https://yasio.dev/assets/img/bg.87635d9.webp");
+ 
+ 
+}

@@ -1,0 +1,15 @@
+.dot {
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: difference; /* Matches yasio.dev’s contrast effect */
+}
+
+.outline {
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998; /* Below dot for layering */
+  mix-blend-mode: difference;
+}
