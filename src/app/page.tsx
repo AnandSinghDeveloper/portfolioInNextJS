@@ -1,22 +1,23 @@
-import React from 'react'
-import Navbar from './Components/Navbar'
-import Timeline from '@mui/lab/Timeline';
-// import PortfolioTimeline from './Components/components/PortfolioTimeline'
+  "use client";
 
+import React from "react";
+import { Timeline } from './Components/ui/timeline';
+import Bainer from './Components/Bainer';
+import { Roboto_Condensed } from "next/font/google";
 
 
 const Home = () => {
+
   return (
-    <div>
+    <div className={"relative w-full h-full font-Roboto_Condensed "}>    
+        <Timeline  data={[ {title: "Start />", content: (<Bainer />)} ]} />  
 
-      
-       <div className='Home-page w-screen h-screen bg-cover '>
-        
-        <Navbar />
-     <Timeline></Timeline>
-
-       </div>
+        <div className="Home-page absolute top-0 z-[-1] left-0 w-full h-screen bg-cover">
+        </div> 
+       
     </div>
+  
+  
   )
 }
 

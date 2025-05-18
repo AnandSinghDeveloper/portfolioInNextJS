@@ -6,7 +6,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 w-full bg-transparent text-white p-4">
+    <nav className="absolute top-0 w-full bg-transparent text-white p-4">
       <div className="flex justify-between items-center">
         <Link href="/" className="text-4xl leading-none font-bold"><span className="text-[#5918DF] text-3xl">{`<`} </span>Anand <span className="text-3xl text-[#5918DF]">{`/>`}</span></Link>
         <div className="hidden md:flex space-x-4 text-xl font-bold">
