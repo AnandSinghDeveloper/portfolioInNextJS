@@ -4,12 +4,12 @@ import { ContainerTextFlip } from './ui/container-text-flip';
 
 const Bainer = () => {
   return (
-    <div className=' font-robotoCondensed'>
+    <div className=' pt-50 ml-10  font-robotoCondensed '>
      <div>
-      <h1 className="text-2xl md:text-5xl font-bold mb-3 text-neutral-500 dark:text-neutral-100">
+      <h1 className="text-2xl md:text-5xl font-bold mb-3 light:text-neutral-500 text-white">
           Hi, My name is <span className='text-[#5918df] '>Anand Singh</span>    
       </h1>
-      <h1 className="text-2xl md:text-5xl  font-bold mb-3 text-neutral-500 dark:text-neutral-100">
+      <h1 className="text-2xl md:text-5xl  font-bold mb-3 light:text-neutral-500 text-neutral-100">
          I design and develop <span className=' '> <ContainerTextFlip words={["WebApps","Mobile Apps","UI/UX Design","Frontend", "Backend" ,"Full Stack" ]} /></span> 
       </h1>
       
