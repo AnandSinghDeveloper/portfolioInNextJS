@@ -29,7 +29,7 @@ export default function RootLayout({
          <FloatingNavDemo />
         
       <AppCacheProvider>{children}</AppCacheProvider>
-        <Footer />
+        {/* <Footer /> */}
       </body>
     </html>
   );
