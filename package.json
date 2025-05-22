@@ -17,6 +17,7 @@
     "@mui/material": "^7.1.0",
     "@mui/material-nextjs": "^7.1.0",
     "@tabler/icons-react": "^3.33.0",
+    "@types/react-syntax-highlighter": "^15.5.13",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "framer-motion": "^12.11.1",
@@ -26,6 +27,7 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-intersection-observer": "^9.16.0",
+    "react-syntax-highlighter": "^15.6.1",
     "tailwind-merge": "^3.3.0"
   },
   "devDependencies": {
