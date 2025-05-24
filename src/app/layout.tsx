@@ -4,7 +4,7 @@ import Footer from "../app/Components/Footer";
 import CustomCursor from "./Components/CustomCursor";
 import "./globals.css";
 import { Roboto_Condensed } from 'next/font/google'
-import { AppCacheProvider } from '@mui/material-nextjs/v13-pagesRouter'
+
 import { FloatingNavDemo } from "../app/Components/Floatnav";
 
 
@@ -28,8 +28,8 @@ export default function RootLayout({
         <Navbar />
          <FloatingNavDemo />
         
-      <AppCacheProvider>{children}</AppCacheProvider>
-        {/* <Footer /> */}
+         {children}
+        <Footer />
       </body>
     </html>
   );

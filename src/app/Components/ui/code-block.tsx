@@ -6,7 +6,7 @@ import { IconCheck, IconCopy } from "@tabler/icons-react";
 
 type CodeBlockProps = {
   language: string;
-  filename: string;
+  filename?: string;
   highlightLines?: number[];
 } & (
   | {
@@ -54,61 +54,77 @@ export const CodeBlock = ({
     : highlightLines;
 
   return (
-    <div className="relative lg:w-[150vh] lg:h-[70vh] rounded-lg bg-slate-900 p-4 font-normal text-xl">
-      <div className="flex flex-col gap-2">
-        {tabsExist && (
-          <div className="flex  overflow-x-auto">
-            {tabs.map((tab, index) => (
-              <button
-                key={index}
-                onClick={() => setActiveTab(index)}
-                className={`px-3 !py-2 text-lg transition-colors font-sans ${
-                  activeTab === index
-                    ? "text-white"
-                    : "text-zinc-400 hover:text-zinc-200"
-                }`}
-              >
-                {tab.name}
-              </button>
-            ))}
-          </div>
-        )}
-        {!tabsExist && filename && (
-          <div className="flex justify-between items-center py-2">
-            <div className="text-base text-zinc-400">{filename}</div>
-            <button
-              onClick={copyToClipboard}
-              className="flex items-center gap-1 text-lg text-zinc-400 hover:text-zinc-200 transition-colors font-sans"
-            >
-              {copied ? <IconCheck size={14} /> : <IconCopy size={14} />}
-            </button>
-          </div>
-        )}
+    <div className="relative w-full rounded-lg bg-slate-900 overflow-hidden">
+      <div className="flex flex-col">
+        {/* Header with filename and tabs */}
+        <div className="flex items-center justify-between border-b border-slate-700/50 bg-slate-800/50 p-3">
+          {tabsExist ? (
+            <div className="flex space-x-2 overflow-x-auto pb-1 scrollbar-hide">
+              {tabs.map((tab, index) => (
+                <button
+                  key={index}
+                  onClick={() => setActiveTab(index)}
+                  className={`whitespace-nowrap rounded-md px-3 py-1 text-sm font-medium transition-colors ${
+                    activeTab === index
+                      ? "bg-slate-700 text-white"
+                      : "text-slate-400 hover:bg-slate-700/50 hover:text-slate-200"
+                  }`}
+                >
+                  {tab.name}
+                </button>
+              ))}
+            </div>
+          ) : (
+            <div className="text-sm text-slate-400">{filename}</div>
+          )}
+          
+          <button
+            onClick={copyToClipboard}
+            className="ml-2 flex items-center gap-1 rounded-md p-1 text-slate-400 transition-colors hover:bg-slate-700 hover:text-slate-200"
+            aria-label="Copy code"
+          >
+            {copied ? (
+              <IconCheck size={16} className="text-green-400" />
+            ) : (
+              <IconCopy size={16} />
+            )}
+          </button>
+        </div>
+
+        {/* Code content */}
+        <div className="overflow-auto max-h-[70vh]">
+          <SyntaxHighlighter
+            language={activeLanguage}
+            style={atomDark}
+            customStyle={{
+              margin: 0,
+              padding: "1rem",
+              background: "transparent",
+              fontSize: "0.875rem",
+              lineHeight: "1.5",
+            }}
+            wrapLines={true}
+            showLineNumbers={true}
+            lineProps={(lineNumber) => ({
+              style: {
+                backgroundColor: activeHighlightLines.includes(lineNumber)
+                  ? "rgba(59, 130, 246, 0.15)"
+                  : "transparent",
+                display: "block",
+                width: "100%",
+              },
+            })}
+            lineNumberStyle={{
+              minWidth: "2.25em",
+              color: "rgb(148, 163, 184)",
+              paddingRight: "1em",
+            }}
+            PreTag="div"
+          >
+            {String(activeCode).replace(/\n$/, "")}
+          </SyntaxHighlighter>
+        </div>
       </div>
-      <SyntaxHighlighter
-        language={activeLanguage}
-        style={atomDark}
-        customStyle={{
-          margin: 0,
-          padding: 0,
-          background: "transparent",
-          fontSize: "0.875rem", // text-sm equivalent
-        }}
-        wrapLines={true}
-        showLineNumbers={true}
-        lineProps={(lineNumber) => ({
-          style: {
-            backgroundColor: activeHighlightLines.includes(lineNumber)
-              ? "rgba(255,255,255,0.1)"
-              : "transparent",
-            display: "block",
-            width: "100%",
-          },
-        })}
-        PreTag="div"
-      >
-        {String(activeCode)}
-      </SyntaxHighlighter>
     </div>
   );
 };

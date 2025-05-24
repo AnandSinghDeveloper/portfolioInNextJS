@@ -7,16 +7,16 @@ const Project = () => {
   
   return (
     <div>
-      <h1 className='p-10 text-2xl lg:text-3xl font-bold'> Projects <span className='text-[#5918df]'> {'/>'} </span></h1>
+      <h1 className='p-10 text-2xl  lg:text-3xl font-bold'> Projects <span className='text-[#5918df]'> {'/>'} </span></h1>
       <div className='grid grid-cols-1 md:grid-cols-2 w-[75vw] lg:grid-cols-3 gap-4'>
     {
       ProjectCardsData.map((project, index) => {
         return(
-           <PinContainer
+           <PinContainer key={index}
         title="Live Projects"
-        href="https://job-huntly-landing-page-i2c2.vercel.app/landing"
+        href="#"
       >
-        <div className="flex basis-full  flex-col  tracking-tight  text-slate-100/50 sm:basis-1/2 w-[1rem]  lg:w-[22vw]  h-[15rem] ">
+        <div className="flex basis-full  flex-col   text-slate-100/50 w-[60vw] md:w-[30vw]  lg:w-[22vw]  h-[15rem] ">
           <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100">
             {project.title}
           </h3>

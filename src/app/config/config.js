@@ -18,64 +18,87 @@ import { SiVercel } from "react-icons/si";
 
 
 
+
+
 export const ProjectCardsData = [
   {
     title: "E-Commerce",
-    description: "E-commerce website built with #React.js, #Tailwind CSS,#Shadcn UI kit,#Redux-Toolkit, #NodeJS , #ExpressJS, #MongoDB, #Mongoose,etc ",
+    description: "Full-featured e-commerce platform with product listings, cart functionality, and secure checkout process.",
     image: "/ecommerce.png",
     link: "#",
+    github: "#",
+    techStack: ["React.js", "Tailwind CSS", "Shadcn UI", "Redux-Toolkit", "Node.js", "Express", "MongoDB"],
+    category: "Full Stack"
   },
   {
     title: "Uber Clone",
-    description: "Uber clone built with #React.js, #Tailwind CSS,#Socket.io, #NodeJS , #ExpressJS, #MongoDB, #Mongoose,etc ",
+    description: "Ride-sharing application with real-time location tracking and trip estimation.",
     image: "/uber.png",
     link: "#",
+    github: "#",
+    techStack: ["React.js", "Tailwind CSS", "Socket.io", "Node.js", "Express", "MongoDB"],
+    category: "Full Stack"
   },
   {
     title: "Work Management System",
-    description: "Work Management System built with #React.js, #Tailwind CSS,#Redux-Toolkit, #localStorage, etc ",
+    description: "Productivity application for task organization and team collaboration.",
     image: "/work.png",
     link: "#",
+    techStack: ["React.js", "Tailwind CSS", "Redux-Toolkit", "LocalStorage"],
+    category: "Frontend"
   },
   {
     title: "Job Huntly",
-    description: "Job Huntly built with #Next.js, #Tailwind CSS,#Redux-Toolkit, fremer-motion  etc ",
+    description: "Job search platform with advanced filtering and application tracking.",
     image: "/job.png",
     link: "#",
-
+    github: "#",
+    techStack: ["Next.js", "Tailwind CSS", "Redux-Toolkit", "Framer Motion"],
+    category: "Frontend"
   },
   {
-    title: "Empoloyee Management System",
-    description: "Employee Management System built with #React.js, #Tailwind CSS,#Redux-Toolkit, #localStorage, etc ",
+    title: "Employee Management System",
+    description: "HR solution for managing employee records, attendance, and performance.",
     image: "/emp.png",
     link: "#",
+    techStack: ["React.js", "Tailwind CSS", "Redux-Toolkit", "LocalStorage"],
+    category: "Frontend"
   },
   {
-    title : "Chess Game",
-    description: "Chess Game built with #EJS, #Tailwind CSS,#Socket.io, #NodeJS , #ExpressJS, etc ",
+    title: "Chess Game",
+    description: "Multiplayer chess game with real-time moves and chat functionality.",
     image: "/chess.png",
     link: "#",
+    github: "#",
+    techStack: ["EJS", "Tailwind CSS", "Socket.io", "Node.js", "Express"],
+    category: "Full Stack"
   },
   {
-    title: "Dairy writeing app",
-    description: "Dairy writeing app built with #E.js, #Tailwind CSS, #NodeJS , #ExpressJS,etc ",
+    title: "Diary Writing App",
+    description: "Personal journal application with rich text editing and entry organization.",
     image: "/dairy.png",
     link: "#",
+    techStack: ["EJS", "Tailwind CSS", "Node.js", "Express"],
+    category: "Full Stack"
   },
   {
     title: "MiniSpotify",
-    description: "MiniSpotify built with  #Html5, #CSS3, #JavaScript, etc ",
+    description: "Music player with playlist management and audio controls.",
     image: "/mini.png",
     link: "#",
+    github: "#",
+    techStack: ["HTML5", "CSS3", "JavaScript"],
+    category: "Frontend"
   },
   {
     title: "Tic Tac Toe",
-    description: "Tic Tac Toe built with #html5, #css3, #javascript, etc ",
+    description: "Classic game with multiplayer mode and game history tracking.",
     image: "/tic.png",
     link: "#",
+    techStack: ["HTML5", "CSS3", "JavaScript"],
+    category: "Frontend"
   }
-
-]
+];
 
 export const SkillsData = [
   {
@@ -144,10 +167,7 @@ export const SkillsData = [
     name: "GitLab",
     icon: <SiGitlab color="#FB6D26" />,
   },
-  {
-    name: ".NET",
-    icon: <AiOutlineDotNet />,
-  }
+  
 
   
 ]
