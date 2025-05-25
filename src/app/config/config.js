@@ -10,11 +10,22 @@ import { BiLogoTypescript } from "react-icons/bi";
 import { RiNextjsFill } from "react-icons/ri";
 import { SiMongodb } from "react-icons/si";
 import { SiGithub } from "react-icons/si";
-import { AiOutlineDotNet } from "react-icons/ai";
+
 import { SiGitlab } from "react-icons/si";
 import { SiDocker } from "react-icons/si";
 import { SiFirebase } from "react-icons/si";
 import { SiVercel } from "react-icons/si";
+import ecommerce from "../../../public/photo-1664455340023-214c33a9d0bd.avif";
+import spotify from "../../../public/31111689.jpg"
+import tic from "../../../public/36118988.jpg"
+import uber from "../../../public/46040760.jpg"
+import dariy from "../../../public/47533589.jpg"
+import employee from "../../../public/career-opportunities-concept-with-modern-flat-vector-52865458.avif"
+import jobhunty from "../../../public/concept-landing-page-design-process_23-2148303914.jpg"
+import chess from "../../../public/file-searching-concept-landing-page_52683-22221.jpg"
+import work from "../../../public/search-engine-optimization-ideas-blog-promotion_882313-15675.jpg"
+
+
 
 
 
@@ -24,7 +35,7 @@ export const ProjectCardsData = [
   {
     title: "E-Commerce",
     description: "Full-featured e-commerce platform with product listings, cart functionality, and secure checkout process.",
-    image: "/ecommerce.png",
+    image: ecommerce,
     link: "#",
     github: "#",
     techStack: ["React.js", "Tailwind CSS", "Shadcn UI", "Redux-Toolkit", "Node.js", "Express", "MongoDB"],
@@ -33,7 +44,7 @@ export const ProjectCardsData = [
   {
     title: "Uber Clone",
     description: "Ride-sharing application with real-time location tracking and trip estimation.",
-    image: "/uber.png",
+    image: uber,
     link: "#",
     github: "#",
     techStack: ["React.js", "Tailwind CSS", "Socket.io", "Node.js", "Express", "MongoDB"],
@@ -42,7 +53,7 @@ export const ProjectCardsData = [
   {
     title: "Work Management System",
     description: "Productivity application for task organization and team collaboration.",
-    image: "/work.png",
+    image: work,
     link: "#",
     techStack: ["React.js", "Tailwind CSS", "Redux-Toolkit", "LocalStorage"],
     category: "Frontend"
@@ -50,8 +61,8 @@ export const ProjectCardsData = [
   {
     title: "Job Huntly",
     description: "Job search platform with advanced filtering and application tracking.",
-    image: "/job.png",
-    link: "#",
+    image: jobhunty,
+    link: '#',
     github: "#",
     techStack: ["Next.js", "Tailwind CSS", "Redux-Toolkit", "Framer Motion"],
     category: "Frontend"
@@ -59,7 +70,7 @@ export const ProjectCardsData = [
   {
     title: "Employee Management System",
     description: "HR solution for managing employee records, attendance, and performance.",
-    image: "/emp.png",
+    image: employee,
     link: "#",
     techStack: ["React.js", "Tailwind CSS", "Redux-Toolkit", "LocalStorage"],
     category: "Frontend"
@@ -67,24 +78,24 @@ export const ProjectCardsData = [
   {
     title: "Chess Game",
     description: "Multiplayer chess game with real-time moves and chat functionality.",
-    image: "/chess.png",
+    image: chess,
     link: "#",
     github: "#",
     techStack: ["EJS", "Tailwind CSS", "Socket.io", "Node.js", "Express"],
-    category: "Full Stack"
+    category: "Backend"
   },
   {
     title: "Diary Writing App",
     description: "Personal journal application with rich text editing and entry organization.",
-    image: "/dairy.png",
+    image: dariy,
     link: "#",
     techStack: ["EJS", "Tailwind CSS", "Node.js", "Express"],
-    category: "Full Stack"
+    category: "Backend"
   },
   {
     title: "MiniSpotify",
     description: "Music player with playlist management and audio controls.",
-    image: "/mini.png",
+    image: spotify,
     link: "#",
     github: "#",
     techStack: ["HTML5", "CSS3", "JavaScript"],
@@ -93,7 +104,7 @@ export const ProjectCardsData = [
   {
     title: "Tic Tac Toe",
     description: "Classic game with multiplayer mode and game history tracking.",
-    image: "/tic.png",
+    image: tic,
     link: "#",
     techStack: ["HTML5", "CSS3", "JavaScript"],
     category: "Frontend"

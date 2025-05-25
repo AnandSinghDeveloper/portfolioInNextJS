@@ -14,8 +14,15 @@ body {
  /* Dark background like yasio.dev */
   color: #ffffff;
   cursor: none; /* Hide default cursor */
+  background: #000;
 
 }
+
+.tachstack::-webkit-scrollbar {
+  display:  none;
+
+}
+
 
 
 
