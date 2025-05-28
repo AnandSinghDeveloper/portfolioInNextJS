@@ -8,7 +8,7 @@ export default function Navbar() {
   return (
     <nav className="absolute  top-0 w-full bg-transparent text-white p-4">
       <div className="flex justify-between items-center">
-        <Link href="/" className="text-4xl leading-none font-bold"><span className="text-[#5918DF] text-3xl">{`<`} </span>Anand <span className="text-3xl text-[#5918DF]">{`/>`}</span></Link>
+        <Link href="/" className="text-2xl lg:text-4xl leading-none font-bold"><span className="text-[#5918DF] text-xl lg:text-3xl ">{`<`} </span>Anand <span className="text-xl lg:text-3xl text-[#5918DF]">{`/>`}</span></Link>
         <div className="hidden md:flex space-x-4 text-xl font-bold">
           <Link href="/">Home <span className=" opacity-50">   /{`>`} </span></Link>
           <Link href="/about">About <span className="opacity-50">  /{`>`}</span></Link>

@@ -62,7 +62,7 @@ export const FloatingNav = ({
         )}
       >
         <div>
-           <Link href="/" className="text-4xl leading-none font-bold"><span className="text-[#5918DF] text-3xl">{`<`} </span>Anand <span className="text-3xl text-[#5918DF]">{`/>`}</span></Link>
+           <Link href="/" className=" text-xl lg:text-4xl leading-none font-bold"><span className="text-[#5918DF] text-xl lg:text-3xl ">{`<`} </span>Anand</Link> <span className="text-lg lg:text-3xl text-[#5918DF]">{`/>`}</span>
         </div>
        <div className="flex">
          {navItems.map((navItem: any, idx: number) => (
@@ -78,7 +78,7 @@ export const FloatingNav = ({
             <span className=" px-1 opacity-50 sm:text-xm">{`/>`}</span> 
           </a>
         ))}
-         <button className="border  text-lg font-medium relative border-neutral-200 dark:border-white/[0.2] light:text-black text-white px-4 py-  rounded-xl">
+         <button className=" hidden lg:block border  text-lg font-medium relative border-neutral-200 dark:border-white/[0.2] light:text-black text-white px-4 py-  rounded-xl">
           <span>Get In Touch</span>
           <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-[#5918DF] to-transparent  h-px" />
         </button>

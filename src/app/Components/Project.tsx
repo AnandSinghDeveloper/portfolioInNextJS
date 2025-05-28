@@ -42,16 +42,12 @@ const Project = () => {
           className='flex items-center justify-center     gap-3 tachstack '>
             {
             project.techStack.map((tach , index)=>{
-              return <button className={ `  ${ tach == 'JavaScript' ? 'border-[#fdf3eb55] text-[#e59b1b]' : 
-                    tach == 'Redux-Toolkit' ? 'border-[#fedeff1f] text-[#C173C6]' :
-                    tach === 'MongoDB' ? 'border-[#effaf71c] text-[#6ED3B8]' :
-                    tach === 'Node.js'? 'border-[#effaf738] text-[#6ED3B8]' :
-                    tach == 'Express' ? 'border-[#fdf3eb28] text-[#e59b1b]' :
+              return <button className={ `  
                     'border-[#edecfc3b] text-[#5550E0]'} border px-2 text-[12px] font-mono   rounded-full` } key={index}>{tach}</button>
             })
           }
           </motion.div>
-        I<Image src={project.image} alt="project" width={200} height={100}  className='w-full h-30 object-cover rounded-2xl'/>
+        I<Image src={project.image} alt="project" width={200} height={100}  className='w-full h-30 object-cover lg:object-top rounded-2xl'/>
         </div>
       </PinContainer>
         )
