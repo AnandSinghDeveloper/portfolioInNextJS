@@ -24,12 +24,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={robotoCondensed.className }  >
-        <CustomCursor />
+        <CustomCursor/>
         <Navbar />
          <FloatingNavDemo />
         
          {children}
-        <Footer />
+        {/* <Footer /> */}
       </body>
     </html>
   );

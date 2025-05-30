@@ -78,10 +78,7 @@ export const FloatingNav = ({
             <span className=" px-1 opacity-50 sm:text-xm">{`/>`}</span> 
           </a>
         ))}
-         <button className=" hidden lg:block border  text-lg font-medium relative border-neutral-200 dark:border-white/[0.2] light:text-black text-white px-4 py-  rounded-xl">
-          <span>Get In Touch</span>
-          <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-[#5918DF] to-transparent  h-px" />
-        </button>
+        
        </div>
        
       </motion.div>

@@ -38,13 +38,13 @@ export const TracingBeam = ({
       damping: 90,
     },
   );
-  const y2 = useSpring(
-    useTransform(scrollYProgress, [0, 1], [50, svgHeight - 200]),
-    {
-      stiffness: 500,
-      damping: 90,
-    },
-  );
+  // const y2 = useSpring(
+  //   useTransform(scrollYProgress, [0, 1], [50, svgHeight - 200]),
+  //   {
+  //     stiffness: 500,
+  //     damping: 90,
+  //   },
+  // );
 
   return (
     <motion.div
@@ -110,7 +110,7 @@ export const TracingBeam = ({
               x1="0"
               x2="0"
               y1={y1} // set y1 for gradient
-              y2={y2} // set y2 for gradient
+              // y2={y2} // set y2 for gradient
             >
               <stop stopColor="#18CCFC" stopOpacity="0"></stop>
               <stop stopColor="#18CCFC"></stop>
