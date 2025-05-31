@@ -78,7 +78,7 @@ export default function CustomCursor() {
   };
 
   return (
-    < >
+    <  >
       {/* Animated Outline */}
       <motion.div 
         className={styles.outline}

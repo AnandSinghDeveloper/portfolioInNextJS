@@ -13,7 +13,7 @@ import Footer from "./Components/Footer";
 
 const Home = () => {
   return (
-    <main className="w-full  bg-[#28282a]">
+    <main className=" w-[100%]  bg-[#0c0c0d]">
       <TracingBeam className=" w-full h-full">
         {/* Hero/Banner Section */}
         <section className="w-full h-screen flex items-center justify-center  px-4 lg:px-12">
@@ -30,9 +30,9 @@ const Home = () => {
             {" "}
             Skills <span className="text-[#5918df]"> {"/>"} </span>
           </h1>
-          <div className="flex flex-col lg:flex-row lg:items-start  items-center justify-between  w-full lg:w-[120%]">
-            <SkillsGlobe />
-            <Skills />
+          <div className="flex flex-col lg:flex-row lg:items-start  items-center justify-between  w-full ">
+           <div className="w-40%"> <SkillsGlobe /> </div>
+           <div className="w-60%"> <Skills /> </div>
           </div>
         </section>
         {/* Projects Section */}

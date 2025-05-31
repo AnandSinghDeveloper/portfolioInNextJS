@@ -6,6 +6,7 @@ import "./globals.css";
 import { Roboto_Condensed } from 'next/font/google'
 
 import { FloatingNavDemo } from "../app/Components/Floatnav";
+import Home from "./page";
 
 
 
@@ -23,12 +24,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={robotoCondensed.className }  >
-        <CustomCursor/>
+      <body className={robotoCondensed.className} >
+        <CustomCursor  />
         <Navbar />
          <FloatingNavDemo />
         
-         {children}
+        {children}
         
       </body>
     </html>

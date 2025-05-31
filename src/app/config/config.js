@@ -209,7 +209,7 @@ export const ContectData =[
   {
     name: "Github",
     icon: <SiGithub />,
-    link: "https://github.com/AbhishekSharma-07"
+    link: "https://github.com/AnandSinghDeveloper"
   },
   {
     name: "Leetcode",
@@ -220,7 +220,7 @@ export const ContectData =[
   {
     name: "LinkedIn",
     icon: <FaLinkedin color="#0078D4" />,
-    link: "https://www.linkedin.com/in/lenoxon/"
+    link: "https://www.linkedin.com/in/anand-thakur-083b09333"
   },{
     name: "Discord",
     icon: <FaDiscord color="#8C9EFF" />,
@@ -234,12 +234,12 @@ export const ContectData =[
   {
     name: "Stack Overflow",
     icon: <FaStackOverflow />,
-    link: "https://stackoverflow.com/users/14863186/lenoxon"
+    link: "https://stackoverflow.com/"
   },
   {
     name: "Twitter",
     icon: <FaSquareXTwitter />,
-    link: "https://twitter.com/lenoxon"
+    link: "https://x.com/notifications"
   },
   {
     name: "Instagram",

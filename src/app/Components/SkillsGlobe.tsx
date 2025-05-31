@@ -34,7 +34,7 @@ const SkillsGlobe = () => {
   );
 
   return (
-    <span className="relative flex  overflow-hidden">
+    <span className="relative flex   overflow-hidden">
       <IconCloud images={images} />
     </span>
   )
