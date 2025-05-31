@@ -1,62 +1,117 @@
-import React from 'react'
-import { PinContainer } from '@/app/Components/ui/3d-pin'
-import { ProjectCardsData } from '@/app/config/config'
-import Image from 'next/image'
-import {motion } from 'framer-motion'
+"use client";
 
+import React from 'react';
+import { ProjectCardsData } from '@/app/config/config';
+import Image from 'next/image';
+import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
+import { ImGithub } from "react-icons/im";
+import { motion, useAnimation } from 'framer-motion';
+import { useEffect } from 'react';
 
 const Project = () => {
-  
+  const controls = useAnimation();
+
+  // Animation for continuous left movement
+  useEffect(() => {
+    const animate = async () => {
+      await controls.start({
+        x: '-100%',
+        transition: {
+          x: {
+            repeat: Infinity,
+            repeatType: 'loop',
+            duration: 15, // Adjust speed here
+            ease: 'linear',
+          },
+        },
+      });
+    };
+    animate();
+  }, [controls]);
+
   return (
-    <div>
-      <h1 className='p-10 text-2xl  lg:text-3xl font-bold'> Projects <span className='text-[#5918df]'> {'/>'} </span></h1>
-      <div className='grid grid-cols-1 md:grid-cols-2 w-[75vw] lg:grid-cols-3 gap-4'>
-    {
-      ProjectCardsData.map((project, index) => {
-        return(
-           <PinContainer key={index}
-        title="Live Projects"
-        href="#"
-      >
-        <div className="flex basis-full  flex-col   text-slate-100/50 w-[60vw] md:w-[30vw]  lg:w-[22vw]  h-[15rem] ">
-         <div className='flex  justify-between w-full'>
-           <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100">
-            {project.title}
-          </h3>
-            <button className=" relative px-1 py-0.5 rounded-full">
-           <span className=" font-normal flex items-center justify-center rounded-full text-sm italic ">
-            {project.category}
-          </span>
-          <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-[#b2b1b5] to-transparent  h-px" />
+    <div className="px-4 sm:px-6 lg:px-8">
+      <h1 className="p-6 sm:p-10 text-2xl lg:text-3xl font-bold  w-full text-start">
+        Projects <span className="text-[#5918df]">{'/>'}</span>
+      </h1>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10 w-full h-full   lg:w-[140%]">
+        {ProjectCardsData.map((project, index) => (
+          <CardContainer key={index} className="inter-var ">
+            <CardBody className=" relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1]   w-[20rem] lg:w-[22rem] mx-auto rounded-xl p-6 transition-all mb-2 h-110 border border-gray-800 duration-300 hover:scale-105">
+              <CardItem
+                translateZ="50"
+                className="text-xl font-bold text-neutral-100 w-full flex items-center justify-between"
+              >
+                <span>{project.title}</span>
+                 <button className="border text-sm font-medium relative border-neutral-400 dark:border-white/[0.2]  text-neutral-400 px-2 py-0.5 rounded-full">
+          <span>{project.category}</span>
+          <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-[#f1eff6] to-transparent  h-px" />
         </button>
-         
-         </div>
-          <div className="text-base h-12 overflow-y-auto  font-normal">
-            <span className="text-slate-500  ">
-              {project.description}
-            </span>
-          </div>
-          <motion.div
-             
+              </CardItem>
 
-          className='flex items-center justify-center     gap-3 tachstack '>
-            {
-            project.techStack.map((tach , index)=>{
-              return <button className={ `  
-                    'border-[#edecfc3b] text-[#5550E0]'} border px-2 text-[12px] font-mono   rounded-full` } key={index}>{tach}</button>
-            })
-          }
-          </motion.div>
-        I<Image src={project.image} alt="project" width={200} height={100}  className='w-full h-30 object-cover lg:object-top rounded-2xl'/>
-        </div>
-      </PinContainer>
-        )
-      })
-    }
+              <CardItem
+                as="p"
+                translateZ="60"
+                className="text-neutral-400 text-sm max-w-full mt-2 line-clamp-3"
+              >
+                {project.description}
+              </CardItem>
 
+              <CardItem className="mt-4 w-full overflow-hidden">
+                <motion.div
+                  className="flex gap-2"
+                  animate={controls}
+                  style={{ display: 'inline-flex', whiteSpace: 'nowrap' }}
+                >
+                  {[...project.techStack, ...project.techStack].map( 
+                    (tech, index) => (
+                      <span
+                        key={index}
+                        className="inline-block m-1 border border-gray-700 bg-gray-800/50 px-3 py-1 rounded-full text-neutral-300 text-xs font-medium"
+                      >
+                        {tech}
+                      </span>
+                    )
+                  )}
+                </motion.div>
+              </CardItem>
+
+              <CardItem translateZ="100" className="w-full mt-4">
+                <Image
+                  src={project.image}
+                  height={1000}
+                  width={1000}
+                  className="h-48 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+                  alt={project.title}
+                />
+              </CardItem>
+
+              <div className="flex justify-between items-center mt-4">
+                <CardItem
+                  translateZ={20}
+                  as="a"
+                  href={project.github}
+                  target="_blank"
+                  className="px-4 py-2 rounded-xl text-sm font-medium text-neutral-200 hover:bg-gray-700/50 transition-colors"
+                >
+                  Live Demo →
+                </CardItem>
+                <CardItem
+                  translateZ={20}
+                  as="a"
+                  href={project.link}
+                  target="_blank"
+                  className="px-4 py-2 rounded-xl flex items-center justify-center gap-2 text-lg font-semibold text-neutral-200 hover:bg-gray-700/50 transition-colors"
+                >
+                  <ImGithub /> Github
+                </CardItem>
+              </div>
+            </CardBody>
+          </CardContainer>
+        ))}
+      </div>
     </div>
-    </div>
-  )
-}
+  );
+};
 
-export default Project
+export default Project;

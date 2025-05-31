@@ -15,18 +15,28 @@ import { SiGitlab } from "react-icons/si";
 import { SiDocker } from "react-icons/si";
 import { SiFirebase } from "react-icons/si";
 import { SiVercel } from "react-icons/si";
-import ecommerce from "../../../public/photo-1664455340023-214c33a9d0bd.avif";
-import spotify from "../../../public/31111689.jpg"
-import tic from "../../../public/36118988.jpg"
-import uber from "../../../public/46040760.jpg"
-import dariy from "../../../public/47533589.jpg"
-import employee from "../../../public/career-opportunities-concept-with-modern-flat-vector-52865458.avif"
-import jobhunty from "../../../public/concept-landing-page-design-process_23-2148303914.jpg"
-import chess from "../../../public/file-searching-concept-landing-page_52683-22221.jpg"
-import work from "../../../public/search-engine-optimization-ideas-blog-promotion_882313-15675.jpg"
+import ecommerce from "../../../public/e-co.jpg";
+import spotify from "../../../public/spotify.avif"
+import tic from "../../../public/tic-tac-toe.jpg"
+import uber from "../../../public/uber.jpg"
+import dariy from "../../../public/dairy.jpg"
+import employee from "../../../public/employs.jpg"
+import jobhunty from "../../../public/jobHunt.jpg"
+import chess from "../../../public/chess.jpg"
+import work from "../../../public/work2.jpg"
 
 
-
+import { FaLinkedin } from "react-icons/fa";
+import { FaInstagramSquare } from "react-icons/fa";
+import { FaSquareXTwitter } from "react-icons/fa6";
+import { FaSnapchat } from "react-icons/fa";
+import { FaHackerrank } from "react-icons/fa";
+import { FaDiscord } from "react-icons/fa";
+import { FaFacebookSquare } from "react-icons/fa";
+import { FaStackOverflow } from "react-icons/fa";
+import { IoMdMail } from "react-icons/io";
+import { BiLogoGmail } from "react-icons/bi";
+import { TbBrandLeetcode } from "react-icons/tb";
 
 
 
@@ -181,4 +191,71 @@ export const SkillsData = [
   
 
   
+]
+
+export const ContectData =[
+  
+  {
+    name: "Email",
+    icon: <IoMdMail color="#1FA0E5" />,
+    link: "mailto:lenoxon@gmail.com"
+  },
+  {
+    name: "Gmail",
+    icon: <BiLogoGmail />,
+    link: "https://mail.google.com/mail/u/0/?fs=1&to=lenoxon@gmail.com"   
+
+  },
+  {
+    name: "Github",
+    icon: <SiGithub />,
+    link: "https://github.com/AbhishekSharma-07"
+  },
+  {
+    name: "Leetcode",
+    icon: <TbBrandLeetcode color="#E7A41F" />,
+    link: "https://leetcode.com/lenoxon/"
+
+  },
+  {
+    name: "LinkedIn",
+    icon: <FaLinkedin color="#0078D4" />,
+    link: "https://www.linkedin.com/in/lenoxon/"
+  },{
+    name: "Discord",
+    icon: <FaDiscord color="#8C9EFF" />,
+    link: "https://discord.gg/9w4r4u3"
+  }
+  ,{
+    name: "Hackerrank",
+    icon: <FaHackerrank />,
+    link: "https://www.hackerrank.com/lenoxon"
+  },
+  {
+    name: "Stack Overflow",
+    icon: <FaStackOverflow />,
+    link: "https://stackoverflow.com/users/14863186/lenoxon"
+  },
+  {
+    name: "Twitter",
+    icon: <FaSquareXTwitter />,
+    link: "https://twitter.com/lenoxon"
+  },
+  {
+    name: "Instagram",
+    icon: <FaInstagramSquare color="#E6D1DA" />,
+    link: "https://www.instagram.com/lenoxon/"
+  },
+  {
+    name: "Facebook",
+    icon: <FaFacebookSquare color="#3F51B5" />,
+    link: "https://www.facebook.com/lenoxon/"
+  },
+  {
+    name: "Snapchat",
+    icon: <FaSnapchat color="#FEDE00" />,
+    link: "https://www.snapchat.com/add/lenoxon"
+  }
+  
+
 ]
