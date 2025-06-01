@@ -65,39 +65,41 @@ export const StarsBackground: React.FC<StarBackgroundProps> = ({
   );
 
   useEffect(() => {
-    const updateStars = () => {
-      if (canvasRef.current) {
-        const canvas = canvasRef.current;
-        const ctx = canvas.getContext("2d");
-        if (!ctx) return;
+  const updateStars = () => {
+    const canvas = canvasRef.current;
+    if (canvas) {
+      const ctx = canvas.getContext("2d");
+      if (!ctx) return;
 
-        const { width, height } = canvas.getBoundingClientRect();
-        canvas.width = width;
-        canvas.height = height;
-        setStars(generateStars(width, height));
-      }
-    };
-
-    updateStars();
-
-    const resizeObserver = new ResizeObserver(updateStars);
-    if (canvasRef.current) {
-      resizeObserver.observe(canvasRef.current);
+      const { width, height } = canvas.getBoundingClientRect();
+      canvas.width = width;
+      canvas.height = height;
+      setStars(generateStars(width, height));
     }
+  };
 
-    return () => {
-      if (canvasRef.current) {
-        resizeObserver.unobserve(canvasRef.current);
-      }
-    };
-  }, [
-    starDensity,
-    allStarsTwinkle,
-    twinkleProbability,
-    minTwinkleSpeed,
-    maxTwinkleSpeed,
-    generateStars,
-  ]);
+  updateStars();
+
+  const resizeObserver = new ResizeObserver(updateStars);
+  const canvas = canvasRef.current;
+  if (canvas) {
+    resizeObserver.observe(canvas);
+  }
+
+  return () => {
+    if (canvas) {
+      resizeObserver.unobserve(canvas);
+    }
+  };
+}, [
+  starDensity,
+  allStarsTwinkle,
+  twinkleProbability,
+  minTwinkleSpeed,
+  maxTwinkleSpeed,
+  generateStars,
+]);
+
 
   useEffect(() => {
     const canvas = canvasRef.current;

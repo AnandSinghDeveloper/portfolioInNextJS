@@ -1,6 +1,5 @@
 import React from 'react'
 import { ContectData } from '../config/config'
-import  Leetcode from '../../../public/icons8-leetcode-48.png'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 
