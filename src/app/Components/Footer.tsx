@@ -1,6 +1,7 @@
 import React from 'react'
 import { ContectData } from '../config/config'
-import Link from 'next/link'
+import  Leetcode from '../../../public/icons8-leetcode-48.png'
+import Image from 'next/image'
 import { motion } from 'framer-motion'
 
 const Footer = () => {
@@ -77,22 +78,14 @@ const Footer = () => {
       <div className='grid grid-cols-2 ml-2 md:grid-cols-3 lg:grid-cols-3 gap-4'>
         {ContectData.map((contact, index) => {
           return (
-            <motion.a
-              href={contact.link}
-              key={index}
-              className='flex text-2xl items-center gap-2'
-              variants={itemVariants}
-              whileHover="hover"
-              initial="hidden"
-              animate="visible"
-            >
-              {contact.icon}
-              <span className='text-lg text-[#5918DF] '>{contact.name}</span>
-            </motion.a>
+            <motion.div className='flex items-center gap-2' key={index}>
+              <Image src={contact.icon} alt={contact.name} width={30} height={30} />
+              <a href={contact.link} target="_blank" rel="noreferrer">{contact.name}</a>
+            </motion.div>
           )
         })}
       </div>
-
+      
       <motion.button className='mt-7 px-8 py-2 rounded-2xl lg:px-10 lg:py-3 text-xl bg-[#5918df] '>Get In Touch</motion.button>
     </motion.div>
   )

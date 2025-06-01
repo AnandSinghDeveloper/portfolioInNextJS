@@ -25,18 +25,30 @@ import jobhunty from "../../../public/jobHunt.jpg"
 import chess from "../../../public/chess.jpg"
 import work from "../../../public/work2.jpg"
 
+import  Linkedin  from "../../../public/icons8-linkedin-375.png";
+import  instagram  from "../../../public/normalinsta.png";
+import  facebook  from "../../../public/icons8-facebook-logo-375.png";
+import  snapchat  from "../../../public/icons8-snapchat-375.png";
+import  Twitter  from "../../../public/icons8-twitter-120.png";
+import  Github  from "../../../public/icons8-github-logo-375.png";
+import  Hackerrank  from "../../../public/icons8-hackerrank-96.png";
+import  Discord  from "../../../public/icons8-discord-144.png";
+import  Stackoverflow  from "../../../public/icons8-stack-overflow-96.png";
+import  Leetcode  from "../../../public/icons8-leetcode-48.png";
+import  Gmail  from "../../../public/icons8-gmail-144.png";
+import  Mail  from "../../../public/icons8-mail-100.png";
 
-import { FaLinkedin } from "react-icons/fa";
-import { FaInstagramSquare } from "react-icons/fa";
-import { FaSquareXTwitter } from "react-icons/fa6";
-import { FaSnapchat } from "react-icons/fa";
-import { FaHackerrank } from "react-icons/fa";
-import { FaDiscord } from "react-icons/fa";
-import { FaFacebookSquare } from "react-icons/fa";
-import { FaStackOverflow } from "react-icons/fa";
-import { IoMdMail } from "react-icons/io";
-import { BiLogoGmail } from "react-icons/bi";
-import { TbBrandLeetcode } from "react-icons/tb";
+// import { FaLinkedin } from "react-icons/fa";
+// import { FaInstagramSquare } from "react-icons/fa";
+// import { FaSquareXTwitter } from "react-icons/fa6";
+// import { FaSnapchat } from "react-icons/fa";
+// import { FaHackerrank } from "react-icons/fa";
+// import { FaDiscord } from "react-icons/fa";
+// import { FaFacebookSquare } from "react-icons/fa";
+// import { FaStackOverflow } from "react-icons/fa";
+// import { IoMdMail } from "react-icons/io";
+// import { BiLogoGmail } from "react-icons/bi";
+// import { TbBrandLeetcode } from "react-icons/tb";
 
 
 
@@ -197,63 +209,63 @@ export const ContectData =[
   
   {
     name: "Email",
-    icon: <IoMdMail color="#1FA0E5" />,
+    icon: Mail,
     link: "mailto:lenoxon@gmail.com"
   },
   {
     name: "Gmail",
-    icon: <BiLogoGmail />,
+    icon: Gmail,
     link: "https://mail.google.com/mail/u/0/?fs=1&to=lenoxon@gmail.com"   
 
   },
   {
     name: "Github",
-    icon: <SiGithub />,
+    icon: Github,
     link: "https://github.com/AnandSinghDeveloper"
   },
   {
     name: "Leetcode",
-    icon: <TbBrandLeetcode color="#E7A41F" />,
+    icon: Leetcode,
     link: "https://leetcode.com/lenoxon/"
 
   },
   {
     name: "LinkedIn",
-    icon: <FaLinkedin color="#0078D4" />,
+    icon: Linkedin,
     link: "https://www.linkedin.com/in/anand-thakur-083b09333"
   },{
     name: "Discord",
-    icon: <FaDiscord color="#8C9EFF" />,
+    icon: Discord,
     link: "https://discord.gg/9w4r4u3"
   }
   ,{
     name: "Hackerrank",
-    icon: <FaHackerrank />,
+    icon: Hackerrank,
     link: "https://www.hackerrank.com/lenoxon"
   },
   {
     name: "Stack Overflow",
-    icon: <FaStackOverflow />,
+    icon: Stackoverflow,
     link: "https://stackoverflow.com/"
   },
   {
     name: "Twitter",
-    icon: <FaSquareXTwitter />,
+    icon: Twitter,
     link: "https://x.com/notifications"
   },
   {
     name: "Instagram",
-    icon: <FaInstagramSquare color="#E6D1DA" />,
+    icon: instagram,
     link: "https://www.instagram.com/lenoxon/"
   },
   {
     name: "Facebook",
-    icon: <FaFacebookSquare color="#3F51B5" />,
+    icon: facebook,
     link: "https://www.facebook.com/lenoxon/"
   },
   {
     name: "Snapchat",
-    icon: <FaSnapchat color="#FEDE00" />,
+    icon: snapchat,
     link: "https://www.snapchat.com/add/lenoxon"
   }
   

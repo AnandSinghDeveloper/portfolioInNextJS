@@ -67,12 +67,12 @@ export default function Navbar() {
     visible: { opacity: 1 }
   };
 
-  const navItems = ["Home", "About", "Projects", "Contact"];
+  const navItems = ["Home", "About", "Skills", "Projects", "Contact"];
   const mobileNavItems = ["Home", "About", "Skills", "Projects", "Contact"];
 
   return (
     <motion.nav
-      className="w-full sticky top-0 left-0 bgackdrop-blur-sm text-white px-4 sm:px-6 lg:px-8 py-4 z-50 "
+      className="w-full sticky  bgackdrop-blur-sm text-white px-4 sm:px-6 lg:px-8 py-4 z-50 "
       initial="hidden"
       animate="visible"
       variants={navbarVariants}
@@ -100,7 +100,7 @@ export default function Navbar() {
               whileHover="hover"
             >
               <Link 
-                href={item === "Home" ? "/" : `/${item.toLowerCase()}`} 
+                href={item === "Home" ? "/" : `#${item.toLowerCase()}`} 
                 className="text-lg font-medium flex items-center px-1"
               >
                 {item}
@@ -169,7 +169,7 @@ export default function Navbar() {
                     whileHover="hover"
                   >
                     <Link
-                      href={item === "Home" ? "/" : `/${item.toLowerCase()}`}
+                      href={item === "Home" ? "/" : `#${item.toLowerCase()}`}
                       className="text-xl font-medium block py-2"
                       onClick={() => setIsOpen(false)}
                     >

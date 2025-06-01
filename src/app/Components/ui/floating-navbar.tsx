@@ -57,14 +57,14 @@ export const FloatingNav = ({
           duration: 0.2,
         }}
         className={cn(
-          "flex w-full fixed top-0 inset-x-0 mx-auto border border-transparent  dark:bg-transparent backdrop-blur-lg  shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] z-[5000] pr-2 pl-8 py-2  items-center justify-between space-x-4",
+          "flex w-[98%] fixed top-0  mx-auto border border-transparent  dark:bg-transparent backdrop-blur-lg  shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] z-[5000] pr-2 pl-8 py-2  items-center justify-between ",
           className
         )}
       >
         <div>
            <Link href="/" className=" text-xl lg:text-4xl leading-none font-bold"><span className="text-[#5918DF] text-xl lg:text-3xl ">{`<`} </span>Anand</Link> <span className="text-lg lg:text-3xl text-[#5918DF]">{`/>`}</span>
         </div>
-       <div className="flex">
+       <div className="flex  ">
          {navItems.map((navItem: any, idx: number) => (
           <a
             key={`link=${idx}`}
@@ -75,7 +75,7 @@ export const FloatingNav = ({
           >
             <span className="block sm:hidden">{navItem.icon}</span>
             <span className="hidden sm:block text-xl font-bold  ">{navItem.name}</span>
-            <span className=" px-1 opacity-50 sm:text-xm">{`/>`}</span> 
+            <span className="  opacity-50 text-sm font-light ">{`/>`}</span> 
           </a>
         ))}
         

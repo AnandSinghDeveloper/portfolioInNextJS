@@ -20,12 +20,12 @@ const Home = () => {
           <Bainer />
         </section>
         {/* About Me Section */}
-        <section className="w-full py-10 px-4 lg:px-12 ">
+        <section className="w-full py-10 px-4 lg:px-12 " id="about">
           <AboutMe />
         </section>
 
         {/* Skills Section */}
-        <section className="w-full h-full py-10 px-4 lg:px-12 ">
+        <section className="w-full h-full py-10 px-4 lg:px-12 " id="skills">
           <h1 className="p-10 text-2xl lg:text-3xl font-bold w-full h-full">
             {" "}
             Skills <span className="text-[#5918df]"> {"/>"} </span>
@@ -37,10 +37,10 @@ const Home = () => {
         </section>
         {/* Projects Section */}
 
-        <section className="w-full py-10 px-4 lg:px-8">
+        <section className="w-full py-10 px-4 lg:px-8" id="projects">
           <Project />
         </section>
-        <section className="w-full py-10 px-4 lg:px-8">
+        <section className="w-full py-10 px-4 lg:px-8" id="contact">
           <Footer />
         </section>
       </TracingBeam>

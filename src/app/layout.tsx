@@ -1,12 +1,10 @@
 "use client";
 import Navbar from "../app/Components/Navbar";
-import Footer from "../app/Components/Footer";
 import CustomCursor from "./Components/CustomCursor";
 import "./globals.css";
 import { Roboto_Condensed } from 'next/font/google'
-
 import { FloatingNavDemo } from "../app/Components/Floatnav";
-import Home from "./page";
+
 
 
 
