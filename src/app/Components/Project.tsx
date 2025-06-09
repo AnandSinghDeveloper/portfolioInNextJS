@@ -7,6 +7,7 @@ import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
 import { ImGithub } from "react-icons/im";
 import { motion, useAnimation, useInView } from 'framer-motion';
 import { useEffect, useRef } from 'react';
+import { BorderBeam } from "../../components/magicui/border-beam";
 
 const Project = () => {
   const controls = useAnimation();
@@ -49,7 +50,7 @@ const Project = () => {
         Projects <span className="text-[#5918df]">{'/>'}</span>
       </motion.h1>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10 w-full h-full lg:w-[140%]">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3  mt-10 w-full h-full lg:w-[90%]">
         {ProjectCardsData.map((project, index) => (
           <motion.div
             key={index}
@@ -64,10 +65,11 @@ const Project = () => {
             } : {}}
           >
             <CardContainer className="inter-var">
-              <CardBody className="relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] w-[20rem] lg:w-[22rem] mx-auto rounded-xl p-6 transition-all mb-2 h-110 border border-gray-800">
+              <CardBody className="relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] w-[18rem] lg:w-[22rem] mx-auto rounded-xl p-6 transition-all mb-2 h-110 border border-gray-800">
                 <CardItem
+                
                   translateZ="50"
-                  className="text-xl font-bold text-neutral-100 w-full flex items-center justify-between"
+                  className="text-xl font-bold text-neutral-100 w-full shadow-2xl flex items-center justify-between"
                 >
                   <span>{project.title}</span>
                   <button className="border text-sm font-medium relative border-neutral-400 dark:border-white/[0.2] text-neutral-400 px-2 py-0.5 rounded-full">
@@ -133,8 +135,12 @@ const Project = () => {
                     <ImGithub /> Github
                   </CardItem>
                 </div>
+             <BorderBeam size={300}  duration={8}  />
+
               </CardBody>
+           
             </CardContainer>
+           
           </motion.div>
         ))}
       </div>

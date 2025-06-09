@@ -17,7 +17,7 @@ const Bainer = () => {
   };
 
   const itemVariants = {
-    hidden: { y: 30, opacity: 0 },
+    hidden: { y: 30, opacity: 0, scale: 0.8 },
     visible: {
       y: 0,
       opacity: 1,
@@ -51,14 +51,14 @@ const Bainer = () => {
     >
       <div>
         <motion.h1 
-          className="text-3xl md:text-5xl font-bold mb-3 text-white"
+          className="text-4xl ml-[-20] md:text-5xl font-bold mb-3 text-white"
           variants={itemVariants}
         >
           Hi, My name is <span className='text-[#5918df]'>Anand Singh</span>    
         </motion.h1>
         
         <motion.h1 
-          className="text-3xl md:text-5xl font-bold mb-3 text-neutral-100"
+          className="text-3xl ml-[-20] md:text-5xl font-bold mb-3 text-neutral-100"
           variants={itemVariants}
         >
           I design and develop{' '}
@@ -68,7 +68,7 @@ const Bainer = () => {
         </motion.h1>
         
         <motion.h3 
-          className='text-sm mt-10 lg:text-xl opacity-30'
+          className='text-sm mt-10 lg:ml-35 lg:text-xl opacity-30'
           variants={{
             hidden: { opacity: 0, x: -20 },
             visible: {

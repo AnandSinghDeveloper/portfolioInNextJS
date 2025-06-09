@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 const Footer = () => {
   // Animation variants
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0, scale: 0.8 },
     visible: {
       opacity: 1,
       transition: {
@@ -17,7 +17,7 @@ const Footer = () => {
   }
 
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
+    hidden: { y: 20, opacit: 0, scale: 0.8 },
     visible: {
       y: 0,
       opacity: 1,
@@ -39,7 +39,7 @@ const Footer = () => {
   }
 
   const titleVariants = {
-    hidden: { x: -50, opacity: 0 },
+    hidden: { x: -50, opacity: 0, scale: 0.8 },
     visible: {
       x: 0,
       opacity: 1,
@@ -54,21 +54,21 @@ const Footer = () => {
 
   return (
     <motion.div 
-      className='w-full h-full text-white'
+      className='w-full h-full text-white '
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, margin: "-100px" }}
       variants={containerVariants}
     >
       <motion.h2 
-        className='p-10 text-2xl lg:text-3xl   font-bold w-full h-full' 
+        className='pb-20 text-5xl lg:text-5xl lg:ml-[-120px] font-bold w-full h-full' 
         variants={titleVariants}
       >
         Contact <span className='text-[#5918df]'>{'/>'}</span>
       </motion.h2>
       
       <motion.div 
-        className='text-lg font-medium mb-7'
+        className='text-4xl lg:ml-[-110px]  font-medium mb-7'
         variants={itemVariants}
       >
         Find me on:
@@ -77,15 +77,15 @@ const Footer = () => {
       <div className='grid grid-cols-2 ml-2 md:grid-cols-3 lg:grid-cols-3 gap-4'>
         {ContectData.map((contact, index) => {
           return (
-            <motion.div className='flex items-center gap-2' key={index}>
-              <Image src={contact.icon} alt={contact.name} width={30} height={30} />
+            <motion.div className='flex items-center text-2xl gap-2' key={index}>
+              <Image src={contact.icon} alt={contact.name} width={40} height={40} />
               <a href={contact.link} target="_blank" rel="noreferrer">{contact.name}</a>
             </motion.div>
           )
         })}
       </div>
       
-      <motion.button className='mt-7 px-8 py-2 rounded-2xl lg:px-10 lg:py-3 text-xl bg-[#5918df] '>Get In Touch</motion.button>
+      <motion.button className='mt-7 px-8 py-2 rounded-3xl lg:px-15 lg:py-4 text-xl bg-[#5918df] '>Get In Touch</motion.button>
     </motion.div>
   )
 }
