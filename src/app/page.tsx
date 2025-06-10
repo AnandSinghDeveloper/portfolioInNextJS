@@ -9,20 +9,29 @@ import { StarsBackground } from "./Components/ui/stars-background";
 import Skills from "./Components/Skills";
 import SkillsGlobe from "./Components/SkillsGlobe";
 import Footer from "./Components/Footer";
+import AnandChatbot from "./Components/AnandChatbot";
 
 
 const Home = () => {
+  const [isVisible, setIsVisible] = React.useState(false);
+ const handleisvisible=()=>{setIsVisible(true)}
   return (
     <main className=" w-[100%] h-full bg-[#0c0c0d]">
 
-     <div className="fixed right-5 z-50 bottom-10  ">
+
+      <div>
+        <AnandChatbot isVisible={isVisible} setIsVisible={setIsVisible}  />
+      </div>
+       {
+         !isVisible &&  <div className="fixed right-5 z-50 bottom-10 botcontainer  " onClick={() => {  handleisvisible();      
+     }}>
       <div className="items-center flex  gap-4">
         <span className="bg-[#5918df] rounded-tr-2xl rounded-tl-2xl rounded-bl-2xl px-4 py-1.5">Get In Touch</span>
          <div className=" chatbot w-15  h-15 rounded-full shadow-xl border border-[#5918df] "> 
       </div>
-      
       </div>
      </div>
+       }
 
       {/* <TracingBeam className=" w-full h-full"> */}
         {/* Hero/Banner Section */}
