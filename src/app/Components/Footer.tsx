@@ -1,9 +1,17 @@
+'use client';
 import React from 'react'
 import { ContectData } from '../config/config'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 
+import { useRouter } from "next/navigation";
+
+
+
 const Footer = () => {
+
+ const router = useRouter();
+
   // Animation variants
   const containerVariants = {
     hidden: { opacity: 0, scale: 0.8 },
@@ -85,7 +93,9 @@ const Footer = () => {
         })}
       </div>
       
-      <motion.button className='mt-7 px-8 py-2 rounded-3xl lg:px-15 lg:py-4 text-xl bg-[#5918df] '>Get In Touch</motion.button>
+      <button onClick={()=>{
+        router.push('/connect')
+      }} className='mt-7 px-8 py-2 rounded-3xl lg:px-15 lg:py-4 text-xl bg-[#5918df] '>Get In Touch</button>
     </motion.div>
   )
 }

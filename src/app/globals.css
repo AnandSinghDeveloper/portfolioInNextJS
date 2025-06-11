@@ -4,17 +4,16 @@
 
 
 
-html, body, * {
+/* html, body, * {
   cursor: none !important;
- 
 
-}
+} */
 
 body {
  
   color: #ffffff;
-  cursor: none; 
-  background: #0e0e0e;
+  /* cursor: none;  */
+  ;
 
 }
 
